@@ -65,28 +65,6 @@ for item in slst:  # item is a new variable; you can call it anything
 for n in lst:  # n is just another variable; you can use any variable you like
     print n
 
-# If you have a list of lists, you can actually grab the items as
-# multiple variables -- imagine you have a list of names, ages,
-# and favorite colors, for example.
-
-people_data = [['Tom',36,'Blue'],
-               ['Katharine',35,'Green'],
-               ['Grace',7,'light blue'],
-               ['Clara',6,'Pink'],
-               ['Lila',4,'Purple']] # end people_data
-
-# You can now loop through that information like this...
-for person,age,color in people_data:
-    print person,'is',age,'years old and likes the color',color
-
-# Isn't that cooL! That will break, however, if you add any item to the list
-# that does not fit the structure.
-
-## Uncomment the three lines below to see an error!
-# people_data.append(['Mary',25]) # This would break the loop above
-# people_data.append(['Bob',27,'blue','yellow'] # So would this!
-# for person,age,color in people_data: print person,age,color # This will throw an error
-
 # If you want to destroy a list as you use it, you can use "pop"
 # Pop takes the last item from a list (or another item if you give
 # it an argument) and does something with it
@@ -122,6 +100,17 @@ for person, age, color in pac_data:
     print '*'*10
 
 # Did your jaw drop? Isn't that awesome?
+
+# Looping through a nested list will break, however, if you add any
+# item to the list that does not fit the given structure -- for example
+# if some items in the list have four items and some have three, you will
+# get an error.
+
+## Uncomment the three lines below to see an error!
+# pac_data.append(['Mary',25]) # This would break the loop above
+# pac_data.append(['Bob',27,'blue','yellow'] # So would this!
+# for person,age,color in pac_data: print person,age,color # This will throw an error
+
 
 # Sometimes it's very handy to go through lists and numbers at the same time.
 # For that purpose, python provides a convenience function enumerate, which 
