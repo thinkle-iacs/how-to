@@ -15,7 +15,6 @@ print lst # => ['foo','bar','baz']
 
 # You can access an item of a list with the index method.
 
-
 lst[2] # -> 'baz'
 lst[1] # -> 'bar'
 
@@ -38,7 +37,6 @@ lst # -> [1, 2, 6, 7, 8, 5, 6, 7, 8, 9, 10]
 
 # You can use the handy "in" operator to test whether
 # a list contains an item at all
-
 if 8 in lst: 
     print "Yes!"
 
@@ -66,6 +64,28 @@ for item in slst:  # item is a new variable; you can call it anything
 
 for n in lst:  # n is just another variable; you can use any variable you like
     print n
+
+# If you have a list of lists, you can actually grab the items as
+# multiple variables -- imagine you have a list of names, ages,
+# and favorite colors, for example.
+
+people_data = [['Tom',36,'Blue'],
+               ['Katharine',35,'Green'],
+               ['Grace',7,'light blue'],
+               ['Clara',6,'Pink'],
+               ['Lila',4,'Purple']] # end people_data
+
+# You can now loop through that information like this...
+for person,age,color in people_data:
+    print person,'is',age,'years old and likes the color',color
+
+# Isn't that cooL! That will break, however, if you add any item to the list
+# that does not fit the structure.
+
+## Uncomment the three lines below to see an error!
+# people_data.append(['Mary',25]) # This would break the loop above
+# people_data.append(['Bob',27,'blue','yellow'] # So would this!
+# for person,age,color in people_data: print person,age,color # This will throw an error
 
 # If you want to destroy a list as you use it, you can use "pop"
 # Pop takes the last item from a list (or another item if you give
